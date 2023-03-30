@@ -107,9 +107,9 @@ let joinStreams = async () => {
             let speaker = evt[i].uid
             let volume = evt[i].level
             if(volume > 0){
-                document.getElementById(`volume-${speaker}`).src = './assets/volume-on.svg'
+                document.getElementById(`volume-${speaker}`).src = 'volume-on.svg'
             }else{
-                document.getElementById(`volume-${speaker}`).src = './assets/volume-off.svg'
+                document.getElementById(`volume-${speaker}`).src = 'volume-off.svg'
             }
             
         
@@ -127,7 +127,7 @@ let joinStreams = async () => {
     
     //#7 - Create player and add it to player list
     let player = `<div class="video-containers" id="video-wrapper-${config.uid}">
-                        <p class="user-uid"><img class="volume-icon" id="volume-${config.uid}" src="./assets/volume-on.svg" /> ${config.uid}</p>
+                        <p class="user-uid"><img class="volume-icon" id="volume-${config.uid}" src="volume-on.svg" /> ${config.uid}</p>
                         <div class="video-player player" id="stream-${config.uid}"></div>
                   </div>`
 
@@ -162,7 +162,7 @@ let handleUserJoined = async (user, mediaType) => {
         }
  
         player = `<div class="video-containers" id="video-wrapper-${user.uid}">
-                        <p class="user-uid"><img class="volume-icon" id="volume-${user.uid}" src="./assets/volume-on.svg" /> ${user.uid}</p>
+                        <p class="user-uid"><img class="volume-icon" id="volume-${user.uid}" src="volume-on.svg" /> ${user.uid}</p>
                         <div  class="video-player player" id="stream-${user.uid}"></div>
                       </div>`
         document.getElementById('user-streams').insertAdjacentHTML('beforeend', player);
